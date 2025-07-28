@@ -1,7 +1,3 @@
 # prog_seminar_website2025
-
-## prog_seminar_website2025-1
-
-## prog_seminar_website2025-2
-
-### commit & push TEST
+こちらはプログラミング講習会「レギオ」のWebページ用リポジトリです．
+ここにアクセスしてしまった方は右上のURLをクリックしてレギオのサイトにアクセスしてください．
