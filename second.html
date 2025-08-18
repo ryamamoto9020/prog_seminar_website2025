@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
     h1 {
       font-size: xx-large;
@@ -45,7 +46,9 @@
       text-decoration: underline;
     }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
   <script>
     window.addEventListener("load", (e) => {
       const params = new URLSearchParams(window.location.search);
@@ -94,7 +97,7 @@
         }
 
         const ranking_link = document.getElementById("ranking");
-        ranking_link.href += "?atcoder_id="+atcoder_id.value;
+        ranking_link.href += "?atcoder_id=" + atcoder_id.value;
 
         document.getElementById("joi-id-warning").style =
           atcoder_id.value.match(/^[JK][0-9]{6}[A-Z]{2}$/g)
@@ -110,42 +113,60 @@
       myModal.show();
     }
   </script>
-  <title>レギオ講習会2025 2日目 (8/4)</title>
+  <title>レギオ講習会2025 2日目 (8/22)</title>
 </head>
 
 <body>
   <div class="container">
-    <h1><a href="second.html">レギオ講習会2025 2日目 (8/4)</a></h1>
+    <h1><a href="second.html">レギオ講習会2025 2日目 (8/22)</a></h1>
 
     <div>
       <p>
         本Webページは，情報オリンピック日本委員会が開催してる「<a href="https://www.ioi-jp.org/seminar/intro">プログラミングを０から学ぶ講座</a>」で<br>
-教科書として採用されている，「<a href="https://www.jikkyo.co.jp/book/detail/22510044">JOI公式テキスト　Pythonで問題解決　情報オリンピックに出てみよう</a>」の<br>
-著者が公開しているサポートページのうち，「<a href="https://pro-ktmr.github.io/joi-text/list.html">本書問題リスト</a>」に掲載の問題の一部を採用している．
+        教科書として採用されている，「<a
+          href="https://www.jikkyo.co.jp/book/detail/22510044">JOI公式テキスト　Pythonで問題解決　情報オリンピックに出てみよう</a>」の<br>
+        著者が公開しているサポートページのうち，「<a href="https://pro-ktmr.github.io/joi-text/list.html">本書問題リスト</a>」に掲載の問題の一部を採用している．
       </p>
       <p>
         更に，本Webページは，情報オリンピック日本委員会が開催してる「<a href="https://jcioi-spring-seminar-2024.peatix.com/">JOI春季セミナー</a>」の<br>
-セミナー中の演習で採用されている問題から抜粋して採用している．
+        セミナー中の演習で採用されている問題から抜粋して採用している．
       </p>
     </div>
 
     <div class="card mb-4">
       <div class="card-header">
-        設定
+        課題提出状況確認ページ
       </div>
       <div class="card-body">
-        <form action="second.html" method="GET">
+        <!--
+        <form action="first.html" method="GET">
           <div class="form-group row">
             <label for="IDs" class="col-sm-4 col-form-label">AtCoder ユーザ名</label>
             <div class="col-sm-8">
-              <input type="textbox" class="form-control" id="atcoder_id" name="atcoder_id" placeholder="AtCoder のユーザ名を入力">
+              <input type="textbox" class="form-control" id="atcoder_id" name="atcoder_id"
+                placeholder="AtCoder のユーザ名を入力">
             </div>
           </div>
+          
           <button type="submit" class="btn btn-dark">表示</button>
           <p class="card-text mt-4">AtCoder ユーザ名を入力すると，表中の正解した問題に色が付くようになり，提出一覧には自分の提出だけが表示されるようになる．</p>
         </form>
-        <p><a id="ranking" href="./second_check.html">全課題提出状況確認ページ(ランキング)</a></p>
+      -->
+        <p><a id="ranking" href="./first_check.html">全課題提出状況確認ページ(ランキング)</a>
+          <br>上記ページにアクセスすると自身および他の参加者の提出状況が確認できます．
+        </p>
+        <p>※ リアルタイム反映ではございません．早ければ本日中，状況によっては数日から1週間程度かかる場合がございます．</p>
       </div>
+    </div>
+
+    <div id="joi-id-warning" class="alert alert-warning" role="alert" style="display: none;">
+      <h4 class="alert-heading">警告</h4>
+      <p>
+        現在あなたが使用している AtCoder アカウント「<span id="joi-id-warning-inner"></span>」は日本情報オリンピックの競技用です．<br />
+        AtCoder Beginner Contest などに参加できないといった制限がかけられています．<br />
+        競技プログラミングにもっと取り組みたいという場合は自分で <a
+          href="https://atcoder.jp/register?continue=https%3A%2F%2Fatcoder.jp%2Fhome">AtCoder のアカウントを作成</a>しましょう．
+      </p>
     </div>
 
     <div>
@@ -155,12 +176,13 @@
       </p>
       <section>
         <h2>
-          &#9312;『JOI2022/2023 一次予選にバーチャル参加しよう』
+          &#9312;『JOI2023/2024 一次予選にバーチャル参加しよう』
         </h2>
         <p>
-         JOI2022/2023 一次予選にバーチャル参加してみましょう．
-         <a href="https://atcoder.jp/contests/joi2023yo1a">https://atcoder.jp/contests/joi2023yo1a</a>を開き<br>
-         『バーチャル参加』をクリックしたあと，下記の 4 つの問題を 50 分でできる限り解いてみてください(本番は80分！)．
+          JOI2023/2024 一次予選にバーチャル参加してみましょう．
+          <a href="https://atcoder.jp/contests/joi2024yo1a"
+            target="_blank">https://atcoder.jp/contests/joi2024yo1a</a>を開き，<br>
+          下記の 4 つの問題をでできる限り解いてみてください(本番は80分！)．
         </p>
         <table class="table">
           <thead>
@@ -173,46 +195,57 @@
           <tbody>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2023yo1a/tasks/joi2023_yo1a_a" target="_blank">長方形 (Rectangle)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo1a/tasks/joi2024_yo1a_a" target="_blank">果物 (Fruit)</a>
               </td>
               <td>
-                JOI 2022/2023 一次予選 (第 1 回) 問題 A
+                JOI 2023/2024 一次予選 (第 1 回) 問題 A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2023yo1a/submissions/?f.Task=joi2023_yo1a_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
-              </td>
-            </tr>
-            <tr class="task">
-              <td>
-                <a href="https://atcoder.jp/contests/joi2023yo1a/tasks/joi2023_yo1a_b" target="_blank">ゾロ目 (Same Numbers)</a>
-              </td>
-              <td>
-                JOI 2022/2023 一次予選 (第 1 回) 問題 B
-              </td>
-              <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2023yo1a/submissions/?f.Task=joi2023_yo1a_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo1a/submissions/?f.Task=joi2024_yo1a_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2023yo1a/tasks/joi2023_yo1a_c" target="_blank">3 つの箱 (Three Boxes)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo1a/tasks/joi2024_yo1a_b" target="_blank">和の判定 (Sum
+                  Checker)</a>
               </td>
               <td>
-                JOI 2022/2023 一次予選 (第 1 回) 問題 C
+                JOI 2023/2024 一次予選 (第 1 回) 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2023yo1a/submissions/?f.Task=joi2023_yo1a_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo1a/submissions/?f.Task=joi2024_yo1a_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2023yo1a/tasks/joi2023_yo1a_d" target="_blank">二人三脚 (Three-Legged Race)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo1a/tasks/joi2024_yo1a_c" target="_blank">ハミング距離 (Hamming
+                  Distance)</a>
+              </td>
+              <td>
+                JOI 2023/2024 一次予選 (第 1 回) 問題 C
+              </td>
+              <td>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo1a/submissions/?f.Task=joi2024_yo1a_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
+              </td>
+            </tr>
+            <tr class="task">
+              <td>
+                <a href="https://atcoder.jp/contests/joi2024yo1a/tasks/joi2024_yo1a_d" target="_blank">現れている数字
+                  (Appearing Numbers)</a>
               </td>
               <td>
                 JOI 2022/2023 一次予選 (第 1 回) 問題 D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2023yo1a/submissions/?f.Task=joi2023_yo1a_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo1a/submissions/?f.Task=joi2024_yo1a_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -222,13 +255,22 @@
         <h2>
           &#9313;『繰り返しの方法を確認しよう』＆『リストの使い方を確認しよう』(1日目の復習)
         </h2>
-        <p>文法チェック項目！(下記リンクは，<a href="https://atcoder.jp/contests/apg4b">C++入門 AtCoder Programming Guide for beginners (APG4b)</a> の各課題ページへのリンクです)
-          <ul>
-            <li>K - 1.10.while文 (<a href="https://atcoder.jp/contests/apg4b/tasks/APG4b_k">https://atcoder.jp/contests/apg4b/tasks/APG4b_k</a>)</li>
-            <li>L - 1.11.for文・break・continue (<a href="https://atcoder.jp/contests/apg4b/tasks/APG4b_l">https://atcoder.jp/contests/apg4b/tasks/APG4b_l</a>)</li>
-            <li>N - 1.13.配列 (<a href="https://atcoder.jp/contests/apg4b/tasks/APG4b_n">https://atcoder.jp/contests/apg4b/tasks/APG4b_n</a>)</li>
-            <li>(応用編) R - 2.01.ループの書き方と範囲for文 (<a href="https://atcoder.jp/contests/apg4b/tasks/APG4b_r">https://atcoder.jp/contests/apg4b/tasks/APG4b_r</a>)</li>
-          </ul>
+        <p>文法チェック項目！(下記リンクは，<a href="https://atcoder.jp/contests/apg4b">C++入門 AtCoder Programming Guide for beginners
+            (APG4b)</a> の各課題ページへのリンクです)
+        <ul>
+          <li>K - 1.10.while文 (<a
+              href="https://atcoder.jp/contests/apg4b/tasks/APG4b_k">https://atcoder.jp/contests/apg4b/tasks/APG4b_k</a>)
+          </li>
+          <li>L - 1.11.for文・break・continue (<a
+              href="https://atcoder.jp/contests/apg4b/tasks/APG4b_l">https://atcoder.jp/contests/apg4b/tasks/APG4b_l</a>)
+          </li>
+          <li>N - 1.13.配列 (<a
+              href="https://atcoder.jp/contests/apg4b/tasks/APG4b_n">https://atcoder.jp/contests/apg4b/tasks/APG4b_n</a>)
+          </li>
+          <li>(応用編) R - 2.01.ループの書き方と範囲for文 (<a
+              href="https://atcoder.jp/contests/apg4b/tasks/APG4b_r">https://atcoder.jp/contests/apg4b/tasks/APG4b_r</a>)
+          </li>
+        </ul>
         </p>
         <h3>例題！</h3>
         <table class="table">
@@ -248,7 +290,9 @@
                 AtCoder Beginner Contest 276 問題 A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc276/submissions/?f.Task=abc276_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc276/submissions/?f.Task=abc276_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -259,7 +303,9 @@
                 JOI 2020/2021 一次予選 (第 3 回) 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2021yo1c/submissions/?f.Task=joi2021_yo1c_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2021yo1c/submissions/?f.Task=joi2021_yo1c_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -270,7 +316,9 @@
                 JOI 2020/2021 一次予選 (第 2 回) 問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2021yo1b/submissions/?f.Task=joi2021_yo1b_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2021yo1b/submissions/?f.Task=joi2021_yo1b_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -281,7 +329,9 @@
                 JOI 2019/2020 一次予選 (第 2 回) 問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2020yo1b/submissions/?f.Task=joi2020_yo1b_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2020yo1b/submissions/?f.Task=joi2020_yo1b_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -304,7 +354,9 @@
                 JOI 2021/2022 一次予選 (第 3 回) 問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2022yo1c/submissions/?f.Task=joi2022_yo1c_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2022yo1c/submissions/?f.Task=joi2022_yo1c_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -315,7 +367,9 @@
                 JOI 2020/2021 一次予選 (第 1 回) 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2021yo1a/submissions/?f.Task=joi2021_yo1a_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2021yo1a/submissions/?f.Task=joi2021_yo1a_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -326,7 +380,9 @@
                 JOIG 2021 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joig2021-open/submissions/?f.Task=joig2021_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joig2021-open/submissions/?f.Task=joig2021_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -349,7 +405,9 @@
                 JOI 2019/2020 一次予選 (第 2 回) 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2020yo1b/submissions/?f.Task=joi2020_yo1b_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2020yo1b/submissions/?f.Task=joi2020_yo1b_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -360,7 +418,9 @@
                 JOI 2021/2022 一次予選 (第 3 回) 問題 D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2022yo1c/submissions/?f.Task=joi2022_yo1c_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2022yo1c/submissions/?f.Task=joi2022_yo1c_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -371,7 +431,9 @@
                 JOI 2021/2022 一次予選 (第 2 回) 問題 D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2022yo1b/submissions/?f.Task=joi2022_yo1b_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2022yo1b/submissions/?f.Task=joi2022_yo1b_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -383,12 +445,19 @@
         <h2>
           &#9314;『辞書順・整列』を使いこなそう！『待ち行列とスタック』を理解しよう！
         </h2>
-        <p>文法チェック項目！(下記リンクは，<a href="https://atcoder.jp/contests/apg4b">C++入門 AtCoder Programming Guide for beginners (APG4b)</a> の各課題ページへのリンクです)
-          <ul>
-            <li>O - 1.14.STLの関数 (<a href="https://atcoder.jp/contests/apg4b/tasks/APG4b_o">https://atcoder.jp/contests/apg4b/tasks/APG4b_o</a>)</li>
-            <li>AA - 3.03.STLのコンテナ (<a href="https://atcoder.jp/contests/apg4b/tasks/APG4b_aa">https://atcoder.jp/contests/apg4b/tasks/APG4b_aa</a>)</li>
-            <li>AI - 4.04.イテレータ (<a href="https://atcoder.jp/contests/apg4b/tasks/APG4b_ai">https://atcoder.jp/contests/apg4b/tasks/APG4b_ai</a>)</li>
-          </ul>
+        <p>文法チェック項目！(下記リンクは，<a href="https://atcoder.jp/contests/apg4b">C++入門 AtCoder Programming Guide for beginners
+            (APG4b)</a> の各課題ページへのリンクです)
+        <ul>
+          <li>O - 1.14.STLの関数 (<a
+              href="https://atcoder.jp/contests/apg4b/tasks/APG4b_o">https://atcoder.jp/contests/apg4b/tasks/APG4b_o</a>)
+          </li>
+          <li>AA - 3.03.STLのコンテナ (<a
+              href="https://atcoder.jp/contests/apg4b/tasks/APG4b_aa">https://atcoder.jp/contests/apg4b/tasks/APG4b_aa</a>)
+          </li>
+          <li>AI - 4.04.イテレータ (<a
+              href="https://atcoder.jp/contests/apg4b/tasks/APG4b_ai">https://atcoder.jp/contests/apg4b/tasks/APG4b_ai</a>)
+          </li>
+        </ul>
         </p>
         <h3>例題！</h3>
         <table class="table">
@@ -408,7 +477,9 @@
                 AtCoder Beginner Contest 007 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc007/submissions/?f.Task=abc007_2&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc007/submissions/?f.Task=abc007_2&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -419,7 +490,9 @@
                 AtCoder Beginner Contest 009 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc009/submissions/?f.Task=abc009_2&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc009/submissions/?f.Task=abc009_2&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -430,7 +503,9 @@
                 AtCoder Beginner Contest 045 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc045/submissions/?f.Task=abc045_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc045/submissions/?f.Task=abc045_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -441,7 +516,9 @@
                 AtCoder Beginner Contest 043 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc043/submissions/?f.Task=abc043_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc043/submissions/?f.Task=abc043_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -464,7 +541,9 @@
                 AtCoder Beginner Contest 066 問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc066/submissions/?f.Task=arc077_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc066/submissions/?f.Task=arc077_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -475,7 +554,9 @@
                 AtCoder Beginner Contest 120 問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc120/submissions/?f.Task=abc120_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc120/submissions/?f.Task=abc120_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -486,7 +567,9 @@
                 JOI 2011/2012 予選 問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2012yo/submissions/?f.Task=joi2012yo_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2012yo/submissions/?f.Task=joi2012yo_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -509,7 +592,9 @@
                 AtCoder Beginner Contest 240 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc240/submissions/?f.Task=abc240_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc240/submissions/?f.Task=abc240_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -520,7 +605,9 @@
                 AtCoder Beginner Contest 188 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc188/submissions/?f.Task=abc188_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc188/submissions/?f.Task=abc188_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -531,7 +618,9 @@
                 JOI 2008/2009 予選 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2009yo/submissions/?f.Task=joi2009yo_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2009yo/submissions/?f.Task=joi2009yo_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -542,7 +631,9 @@
                 AtCoder Beginner Contest 088 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc088/submissions/?f.Task=abc088_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc088/submissions/?f.Task=abc088_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -553,7 +644,9 @@
                 AtCoder Beginner Contest 082 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc082/submissions/?f.Task=abc082_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc082/submissions/?f.Task=abc082_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -564,7 +657,9 @@
                 JOI 2011/2012 予選 問題 B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2012yo/submissions/?f.Task=joi2012yo_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2012yo/submissions/?f.Task=joi2012yo_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -575,7 +670,9 @@
                 AtCoder Grand Contest 027 問題 A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/agc027/submissions/?f.Task=agc027_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/agc027/submissions/?f.Task=agc027_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -587,7 +684,8 @@
         <h2>
           &#9315;『全探索・動的計画法』に触れよう！
         </h2>
-        <p>全探索については，E869120さんの <a href="https://qiita.com/e869120/items/25cb52ba47be0fd418d6#1-%E6%8E%A2%E7%B4%A2%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E3%81%A8%E3%81%AF">Qiitaの記事</a>を読んでおこう！
+        <p>全探索については，E869120さんの <a
+            href="https://qiita.com/e869120/items/25cb52ba47be0fd418d6#1-%E6%8E%A2%E7%B4%A2%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E3%81%A8%E3%81%AF">Qiitaの記事</a>を読んでおこう！
         </p>
         <h3>例題！</h3>
         <table class="table">
@@ -607,7 +705,9 @@
                 AtCoder Beginner Contest 113 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc113/submissions/?f.Task=abc113_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc113/submissions/?f.Task=abc113_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -618,7 +718,9 @@
                 AtCoder Beginner Contest 097 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc097/submissions/?f.Task=abc097_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc097/submissions/?f.Task=abc097_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -629,7 +731,9 @@
                 Educational DP Contest / DP まとめコンテスト 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -652,7 +756,9 @@
                 第１２回日本情報オリンピック 予選（過去問） 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2013yo/submissions/?f.Task=joi2013yo_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2013yo/submissions/?f.Task=joi2013yo_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -663,7 +769,9 @@
                 AtCoder Beginner Contest 051 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc051/submissions/?f.Task=abc051_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc051/submissions/?f.Task=abc051_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -674,7 +782,9 @@
                 Educational DP Contest / DP まとめコンテスト 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -697,7 +807,9 @@
                 AtCoder Beginners Selection 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abs/submissions/?f.Task=abc085_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abs/submissions/?f.Task=abc085_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -708,7 +820,9 @@
                 AtCoder Beginner Contest 057 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc057/submissions/?f.Task=abc057_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc057/submissions/?f.Task=abc057_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -719,7 +833,9 @@
                 競プロ典型 90 問 問題050
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/typical90/submissions/?f.Task=typical90_ax&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/typical90/submissions/?f.Task=typical90_ax&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -727,10 +843,12 @@
                 <a href="https://atcoder.jp/contests/abc129/tasks/abc129_c" target="_blank">Typical Stairs</a>
               </td>
               <td>
-                 AtCoder Beginner Contest 129 問題C
+                AtCoder Beginner Contest 129 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc129/submissions/?f.Task=abc129_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc129/submissions/?f.Task=abc129_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -741,7 +859,9 @@
                 Educational DP Contest / DP まとめコンテスト 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -751,7 +871,8 @@
         <h2>
           &#9316;『全探索・深さ優先探索・幅優先探索』に触れよう！
         </h2>
-        <p>全探索については，E869120さんの <a href="https://qiita.com/e869120/items/25cb52ba47be0fd418d6#1-%E6%8E%A2%E7%B4%A2%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E3%81%A8%E3%81%AF">Qiitaの記事</a>を読んでおこう！
+        <p>全探索については，E869120さんの <a
+            href="https://qiita.com/e869120/items/25cb52ba47be0fd418d6#1-%E6%8E%A2%E7%B4%A2%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E3%81%A8%E3%81%AF">Qiitaの記事</a>を読んでおこう！
         </p>
         <p>
           深さ優先探索に置いては，「再帰呼び出し」「スタック」を使うことが多いです．詳しくは例題をチェック．<br>
@@ -775,7 +896,9 @@
                 AtCoder Typical Contest 001 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/atc001/submissions/?f.Task=dfs_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/atc001/submissions/?f.Task=dfs_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -786,13 +909,15 @@
                 AtCoder Typical Contest 002 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/atc002/submissions/?f.Task=abc007_3&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/atc002/submissions/?f.Task=abc007_3&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
         </table>
-<h3>二次予選の最初２つの問題にチャレンジ！</h3>
-<p><a href="https://atcoder.jp/contests/joi2024yo2">JOI 2023/2024 二次予選 過去問</a>のA,Bにチャレンジ．</p>
+        <h3>二次予選の最初２つの問題にチャレンジ！</h3>
+        <p><a href="https://atcoder.jp/contests/joi2024yo2">JOI 2023/2024 二次予選 過去問</a>のA,Bにチャレンジ．</p>
         <table class="table">
           <thead>
             <tr>
@@ -804,24 +929,30 @@
           <tbody>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_a" target="_blank">カードゲーム 2 (Card Game 2)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_a" target="_blank">カードゲーム 2 (Card Game
+                  2)</a>
               </td>
               <td>
                 JOI 2023/2024 二次予選 過去問 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_b" target="_blank">買い物 2 (Shopping 2)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_b" target="_blank">買い物 2 (Shopping
+                  2)</a>
               </td>
               <td>
                 JOI 2023/2024 二次予選 過去問 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -844,7 +975,9 @@
                 AtCoder Beginner Contest 029 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc029/submissions/?f.Task=abc029_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc029/submissions/?f.Task=abc029_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -855,7 +988,9 @@
                 トヨタ自動車プログラミングコンテスト2022(AtCoder Beginner Contest 270) 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc270/submissions/?f.Task=abc270_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc270/submissions/?f.Task=abc270_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -872,13 +1007,16 @@
           <tbody>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_c" target="_blank">白色光 2 (White Light 2)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_c" target="_blank">白色光 2 (White Light
+                  2)</a>
               </td>
               <td>
                 JOI 2023/2024 二次予選 過去問 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -889,7 +1027,9 @@
                 AtCoder Beginner Contest 114 問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc114/submissions/?f.Task=abc114_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc114/submissions/?f.Task=abc114_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -900,18 +1040,23 @@
                 AtCoder Beginner Contest 104 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc104/submissions/?f.Task=abc104_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc104/submissions/?f.Task=abc104_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/abc284/tasks/abc284_c" target="_blank">Count Connected Components</a>
+                <a href="https://atcoder.jp/contests/abc284/tasks/abc284_c" target="_blank">Count Connected
+                  Components</a>
               </td>
               <td>
                 AtCoder Beginner Contest 284 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc284/submissions/?f.Task=abc284_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc284/submissions/?f.Task=abc284_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -922,7 +1067,9 @@
                 AtCoder Beginner Contest 204 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc204/submissions/?f.Task=abc204_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc204/submissions/?f.Task=abc204_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -933,7 +1080,9 @@
                 AtCoder Beginner Contest 168 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc168/submissions/?f.Task=abc168_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc168/submissions/?f.Task=abc168_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -944,7 +1093,9 @@
                 AtCoder Beginner Contest 236 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc236/submissions/?f.Task=abc236_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc236/submissions/?f.Task=abc236_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -955,29 +1106,37 @@
                 AtCoder Beginner Contest 272 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc272/submissions/?f.Task=abc272_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc272/submissions/?f.Task=abc272_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_d" target="_blank">庭園 2 (Garden 2) </a>
+                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_d" target="_blank">庭園 2 (Garden 2)
+                </a>
               </td>
               <td>
                 JOI 2023/2024 二次予選 過去問 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_e" target="_blank">高速道路の通行料金 (Highway Tolls)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo2/tasks/joi2024_yo2_e" target="_blank">高速道路の通行料金 (Highway
+                  Tolls)</a>
               </td>
               <td>
                 JOI 2023/2024 二次予選 過去問 問題E
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_e&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo2/submissions/?f.Task=joi2024_yo2_e&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
@@ -992,8 +1151,8 @@
         <p>
           β以降は今回取り扱っていないデータ構造・アルゴリズムが必要になるものが多めです．
         </p>
-<h3>αコース</h3>
-<p>計算量，全探索，再帰，動的計画法の初歩がわかる人向けの問題集です．</p>
+        <h3>αコース</h3>
+        <p>計算量，全探索，再帰，動的計画法の初歩がわかる人向けの問題集です．</p>
         <table class="table">
           <thead>
             <tr>
@@ -1005,13 +1164,16 @@
           <tbody>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/joi2024yo1c/tasks/joi2024_yo1c_c" target="_blank">揃った文字 (Matched Letters)</a>
+                <a href="https://atcoder.jp/contests/joi2024yo1c/tasks/joi2024_yo1c_c" target="_blank">揃った文字 (Matched
+                  Letters)</a>
               </td>
               <td>
                 JOI 2023/2024 一次予選 (第3回) 過去問 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2024yo1c/submissions/?f.Task=joi2024_yo1c_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2024yo1c/submissions/?f.Task=joi2024_yo1c_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1022,7 +1184,9 @@
                 AtCoder Beginner Contest 142 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc142/submissions/?f.Task=abc142_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc142/submissions/?f.Task=abc142_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1033,7 +1197,9 @@
                 第７回日本情報オリンピック 予選（過去問） 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/joi2008yo/submissions/?f.Task=joi2008yo_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/joi2008yo/submissions/?f.Task=joi2008yo_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1044,7 +1210,9 @@
                 AtCoder Beginners Selection 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abs/submissions/?f.Task=abc081_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abs/submissions/?f.Task=abc081_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1055,13 +1223,15 @@
                 AtCoder Beginner Contest 045 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc045/submissions/?f.Task=arc061_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc045/submissions/?f.Task=arc061_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
         </table>
-<h3>βコース</h3>
-<p>JOI 二次予選突破を目指す人や JOI 本選突破を目指す人を対象とした，<br>全探索，再帰，二分探索法，貪欲法，データ構造の初歩, グラフの初歩がわかる人向けの問題集です．</p>
+        <h3>βコース</h3>
+        <p>JOI 二次予選突破を目指す人や JOI 本選突破を目指す人を対象とした，<br>全探索，再帰，二分探索法，貪欲法，データ構造の初歩, グラフの初歩がわかる人向けの問題集です．</p>
         <table class="table">
           <thead>
             <tr>
@@ -1073,13 +1243,16 @@
           <tbody>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_i" target="_blank">Brute Force 2</a>
+                <a href="https://atcoder.jp/contests/math-and-algorithm/tasks/math_and_algorithm_i"
+                  target="_blank">Brute Force 2</a>
               </td>
               <td>
                 アルゴリズムと数学　演習問題集 問題009
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/math-and-algorithm/submissions/?f.Task=math_and_algorithm_i&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/math-and-algorithm/submissions/?f.Task=math_and_algorithm_i&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1090,7 +1263,9 @@
                 モノグサプログラミングコンテスト2022（AtCoder Beginner Contest 249）問題 C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc249/submissions/?f.Task=abc249_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc249/submissions/?f.Task=abc249_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1101,7 +1276,9 @@
                 AtCoder Beginner Contest 183 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc183/submissions/?f.Task=abc183_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc183/submissions/?f.Task=abc183_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1112,18 +1289,23 @@
                 サントリープログラミングコンテスト2023（AtCoder Beginner Contest 321） 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc321/submissions/?f.Task=abc321_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc321/submissions/?f.Task=abc321_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_a" target="_blank">二分探索の練習問題</a>
+                <a href="https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_a"
+                  target="_blank">二分探索の練習問題</a>
               </td>
               <td>
                 典型アルゴリズム問題集 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/typical-algorithm/submissions/?f.Task=typical_algorithm_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/typical-algorithm/submissions/?f.Task=typical_algorithm_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1134,7 +1316,9 @@
                 パナソニックプログラミングコンテスト2021(AtCoder Beginner Contest 231) 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc231/submissions/?f.Task=abc231_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc231/submissions/?f.Task=abc231_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1145,7 +1329,9 @@
                 AtCoder Beginner Contest 143 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc143/submissions/?f.Task=abc143_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc143/submissions/?f.Task=abc143_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1156,7 +1342,9 @@
                 AtCoder Beginner Contest 196 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc196/submissions/?f.Task=abc196_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc196/submissions/?f.Task=abc196_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1167,7 +1355,9 @@
                 AtCoder Beginner Contest 205 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc205/submissions/?f.Task=abc205_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc205/submissions/?f.Task=abc205_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1178,7 +1368,9 @@
                 AtCoder Regular Contest 109 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/arc109/submissions/?f.Task=arc109_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/arc109/submissions/?f.Task=arc109_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1189,7 +1381,9 @@
                 Educational DP Contest / DP まとめコンテスト 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1200,7 +1394,9 @@
                 Educational DP Contest / DP まとめコンテスト 問題E
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_e&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_e&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1211,7 +1407,9 @@
                 トヨタ自動車プログラミングコンテスト2023#3(AtCoder Beginner Contest 306) 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc306/submissions/?f.Task=abc306_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc306/submissions/?f.Task=abc306_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1222,18 +1420,23 @@
                 AtCoder Beginner Contest 160 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc160/submissions/?f.Task=abc160_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc160/submissions/?f.Task=abc160_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_b" target="_blank">区間スケジューリング問題</a>
+                <a href="https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_b"
+                  target="_blank">区間スケジューリング問題</a>
               </td>
               <td>
                 典型アルゴリズム問題集 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/typical-algorithm/submissions/?f.Task=typical_algorithm_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/typical-algorithm/submissions/?f.Task=typical_algorithm_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1244,7 +1447,9 @@
                 AtCoder Beginner Contest 153 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc153/submissions/?f.Task=abc153_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc153/submissions/?f.Task=abc153_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1255,7 +1460,9 @@
                 AtCoder Beginner Contest 148 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc148/submissions/?f.Task=abc148_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc148/submissions/?f.Task=abc148_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1266,7 +1473,9 @@
                 AtCoder Beginner Contest 131 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc131/submissions/?f.Task=abc131_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc131/submissions/?f.Task=abc131_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1277,7 +1486,9 @@
                 AtCoder Regular Contest 092 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/arc092/submissions/?f.Task=arc092_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/arc092/submissions/?f.Task=arc092_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1288,7 +1499,9 @@
                 AtCoder Grand Contest 009 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/agc009/submissions/?f.Task=agc009_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/agc009/submissions/?f.Task=agc009_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1299,7 +1512,9 @@
                 AtCoder Beginner Contest 245 問題E
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc245/submissions/?f.Task=abc245_e&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc245/submissions/?f.Task=abc245_e&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1310,7 +1525,9 @@
                 CodeQUEEN 2023 予選 (AtCoder Beginner Contest 308) 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc308/submissions/?f.Task=abc308_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc308/submissions/?f.Task=abc308_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1321,7 +1538,9 @@
                 第三回日本最強プログラマー学生選手権-予選-（AtCoder Beginner Contest 262）問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc262/submissions/?f.Task=abc262_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc262/submissions/?f.Task=abc262_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1332,7 +1551,9 @@
                 AtCoder Beginner Contest 276 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc276/submissions/?f.Task=abc276_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc276/submissions/?f.Task=abc276_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1343,18 +1564,23 @@
                 AtCoder Beginner Contest 054 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc054/submissions/?f.Task=abc054_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc054/submissions/?f.Task=abc054_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/typical90/tasks/typical90_c" target="_blank">Longest Circular Road（★4）</a>
+                <a href="https://atcoder.jp/contests/typical90/tasks/typical90_c" target="_blank">Longest Circular
+                  Road（★4）</a>
               </td>
               <td>
                 競プロ典型 90 問 問題003
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/typical90/submissions/?f.Task=typical90_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/typical90/submissions/?f.Task=typical90_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1365,7 +1591,9 @@
                 AtCoder Grand Contest 005 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/agc005/submissions/?f.Task=agc005_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/agc005/submissions/?f.Task=agc005_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1376,7 +1604,9 @@
                 Ｓｋｙ株式会社プログラミングコンテスト2023（AtCoder Beginner Contest 289）問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc289/submissions/?f.Task=abc289_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc289/submissions/?f.Task=abc289_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1387,7 +1617,9 @@
                 AtCoder Beginner Contest 187 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc187/submissions/?f.Task=abc187_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc187/submissions/?f.Task=abc187_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1398,7 +1630,9 @@
                 AtCoder Beginner Contest 291（Sponsored by TOYOTA SYSTEMS） 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc291/submissions/?f.Task=abc291_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc291/submissions/?f.Task=abc291_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1409,15 +1643,17 @@
                 キャディプログラミングコンテスト2021(AtCoder Beginner Contest 193) 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc193/submissions/?f.Task=abc193_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc193/submissions/?f.Task=abc193_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
         </table>
-<h3>γコース</h3>
-<p>：JOI 二次予選突破を目指す人や JOI 本選突破を目指す人を対象に，<br>
-動的計画法，グラフと木，Union-Find，グラフ探索，最短路問題，最小全域木問題，<br>
-ネットワークフローの初歩がわかる人向けの問題集です．</p>
+        <h3>γコース</h3>
+        <p>：JOI 二次予選突破を目指す人や JOI 本選突破を目指す人を対象に，<br>
+          動的計画法，グラフと木，Union-Find，グラフ探索，最短路問題，最小全域木問題，<br>
+          ネットワークフローの初歩がわかる人向けの問題集です．</p>
         <table class="table">
           <thead>
             <tr>
@@ -1435,18 +1671,23 @@
                 典型アルゴリズム問題集 上級?エキスパート編 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/pastbook2022/submissions/?f.Task=pastbook2022_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/pastbook2022/submissions/?f.Task=pastbook2022_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/pastbook2022/tasks/pastbook2022_a" target="_blank">区間分割の仕方を最適化する問題</a>
+                <a href="https://atcoder.jp/contests/pastbook2022/tasks/pastbook2022_a"
+                  target="_blank">区間分割の仕方を最適化する問題</a>
               </td>
               <td>
                 典型アルゴリズム問題集 上級?エキスパート編 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/pastbook2022/submissions/?f.Task=pastbook2022_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/pastbook2022/submissions/?f.Task=pastbook2022_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1457,7 +1698,9 @@
                 競技プログラミングの鉄則　演習問題集 問題A20
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/tessoku-book/submissions/?f.Task=tessoku_book_t&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/tessoku-book/submissions/?f.Task=tessoku_book_t&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1468,7 +1711,9 @@
                 Educational DP Contest / DP まとめコンテスト 問題F
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_f&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/dp/submissions/?f.Task=dp_f&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1479,7 +1724,9 @@
                 第三回日本最強プログラマー学生選手権-予選-（AtCoder Beginner Contest 262）問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc262/submissions/?f.Task=abc262_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc262/submissions/?f.Task=abc262_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1490,7 +1737,9 @@
                 AtCoder Beginner Contest 054 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc054/submissions/?f.Task=abc054_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc054/submissions/?f.Task=abc054_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1501,7 +1750,9 @@
                 AtCoder Library Practice Contest 問題A
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/practice2/submissions/?f.Task=practice2_a&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/practice2/submissions/?f.Task=practice2_a&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1512,7 +1763,9 @@
                 AtCoder Beginner Contest 075 問題C
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc075/submissions/?f.Task=abc075_c&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc075/submissions/?f.Task=abc075_c&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1523,18 +1776,23 @@
                 AtCoder Beginner Contest 177 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc177/submissions/?f.Task=abc177_d&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc177/submissions/?f.Task=abc177_d&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
               <td>
-                <a href="https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_f" target="_blank">最小全域木問題</a>
+                <a href="https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_f"
+                  target="_blank">最小全域木問題</a>
               </td>
               <td>
                 典型アルゴリズム問題集 問題F
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/typical-algorithm/submissions/?f.Task=typical_algorithm_f&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/typical-algorithm/submissions/?f.Task=typical_algorithm_f&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1545,7 +1803,9 @@
                 AtCoder Beginner Contest 218 問題E
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc218/submissions/?f.Task=abc218_e&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc218/submissions/?f.Task=abc218_e&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1556,7 +1816,9 @@
                 HHKB プログラミングコンテスト 2022（AtCoder Beginner Contest 235） 問題E
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc235/submissions/?f.Task=abc235_e&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc235/submissions/?f.Task=abc235_e&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1567,7 +1829,9 @@
                 AtCoder Beginner Contest 065 問題B
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc065/submissions/?f.Task=arc076_b&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc065/submissions/?f.Task=arc076_b&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1578,7 +1842,9 @@
                 典型アルゴリズム問題集 上級?エキスパート編 問題E
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/pastbook2022/submissions/?f.Task=pastbook2022_e&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/pastbook2022/submissions/?f.Task=pastbook2022_e&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1589,7 +1855,9 @@
                 AtCoder Beginner Contest 010 問題D
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc010/submissions/?f.Task=abc010_4&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc010/submissions/?f.Task=abc010_4&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
             <tr class="task">
@@ -1600,7 +1868,9 @@
                 デンソークリエイトプログラミングコンテスト2022（AtCoder Beginner Contest 239） 問題G
               </td>
               <td>
-                <a class="submissions" href="https://atcoder.jp/contests/abc239/submissions/?f.Task=abc239_g&f.LanguageName=&f.Status=&f.User=" target="_blank">提出一覧</a>
+                <a class="submissions"
+                  href="https://atcoder.jp/contests/abc239/submissions/?f.Task=abc239_g&f.LanguageName=&f.Status=&f.User="
+                  target="_blank">提出一覧</a>
               </td>
             </tr>
           </tbody>
